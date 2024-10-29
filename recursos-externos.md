@@ -1,4 +1,3 @@
----
 
 ### **Unidad 1: Objetos y Arreglos**
 - **MDN Web Docs - Objetos en JavaScript**: [MDN - Objetos](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Working_with_Objects)
