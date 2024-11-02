@@ -1,13 +1,7 @@
 ---
 
-### **Unidad 1: Introducción - Objetos y Arreglos**
+### **Unidad 1: Introducción - Variables, Objetos y Arreglos**
 
-#### **¿Qué es JavaScript?**
-JavaScript es un lenguaje de programación interpretado, ligero y orientado a objetos, utilizado principalmente para crear páginas web interactivas. Fue creado por Brendan Eich en 1995 y ha evolucionado significativamente desde entonces, convirtiéndose en un pilar fundamental del desarrollo web moderno.
-
-Claro, aquí tienes una explicación sobre variables en JavaScript, incluyendo las mejores prácticas para nombrarlas, su propósito y las palabras reservadas para su declaración, junto con sus diferencias y usos.
-
----
 
 ## **Variables en JavaScript**
 
