@@ -1,4 +1,4 @@
-# **Unidad 1: Introducción - Variables, Objetos y Arreglos*
+# **Unidad 1: Introducción - Variables, Objetos y Arreglos**
 
 
 ## **Variables en JavaScript**
