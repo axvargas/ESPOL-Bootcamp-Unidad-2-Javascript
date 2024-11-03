@@ -119,40 +119,212 @@ registrarVenta(50);  // Venta registrada. Total ventas: $150
 - [JavaScript.info - Variables](https://javascript.info/variables)
 - [MDN Web Docs - var, let, const](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Grammar_and_types#Declaraci%C3%B3n_de_variables)
 
---- 
 
-#### **Tipos de Datos Primitivos**
-JavaScript tiene varios tipos de datos primitivos:
-- `number`: Números (enteros o flotantes).
-- `string`: Cadenas de texto.
-- `boolean`: Valores lógicos (`true` o `false`).
-- `null`: Representa "ningún valor".
-- `undefined`: Indica que una variable no ha sido asignada.
-- `symbol`: Un valor único que no puede ser replicado.
-  
-#### **Objetos**
-Los objetos son colecciones de pares clave-valor. Cada propiedad de un objeto tiene un nombre (clave) y un valor.
+---
+
+## **Tipos de Datos en JavaScript**
+
+1. **Número (`number`)**
+2. **Cadena de texto (`string`)**
+3. **Booleano (`boolean`)**
+4. **Nulo (`null`)**
+5. **Indefinido (`undefined`)**
+6. **Símbolo (`symbol`)**
+7. **Objeto (`object`)**
+8. **Arreglo (`array`)** - Un tipo especial de objeto
+9. **Función (`function`)** - Otro tipo especial de objeto
+
+---
+
+### **1. Números (`number`)**
+
+Los números en JavaScript incluyen tanto enteros como decimales.
+
+**Funciones útiles**:
+- `Math.round()`: Redondea un número al entero más cercano.
+- `Math.floor()`: Redondea hacia abajo.
+- `Math.ceil()`: Redondea hacia arriba.
+- `Math.random()`: Genera un número aleatorio entre 0 y 1.
+- `toFixed()`: Redondea un número a un número fijo de decimales.
+
+**Ejemplo práctico**:
 ```javascript
-const persona = {
-  nombre: "Juan",
-  edad: 30,
-  saludar: function() {
-    console.log("Hola, soy " + this.nombre);
-  }
+let precio = 199.99;
+console.log(precio.toFixed(1)); // "200.0"
+console.log(Math.round(precio)); // 200
+console.log(Math.random() * 10); // Número aleatorio entre 0 y 10
+```
+
+**Recurso externo**: [MDN - Números en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Numbers_and_dates)
+
+---
+
+### **2. Cadenas de texto (`string`)**
+
+Una cadena es una secuencia de caracteres utilizada para representar texto.
+
+**Funciones útiles**:
+- `length`: Devuelve la longitud de la cadena.
+- `toUpperCase()`: Convierte la cadena a mayúsculas.
+- `toLowerCase()`: Convierte la cadena a minúsculas.
+- `includes()`: Verifica si la cadena contiene otra cadena.
+- `slice()`: Extrae una parte de la cadena.
+- `trim()`: Elimina los espacios en blanco al inicio y al final de la cadena.
+
+**Ejemplo práctico**:
+```javascript
+let mensaje = "  Hola, Mundo!  ";
+console.log(mensaje.trim().toUpperCase()); // "HOLA, MUNDO!"
+console.log(mensaje.includes("Mundo")); // true
+```
+
+**Recurso externo**: [MDN - Strings en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Strings_and_Text)
+
+---
+
+### **3. Booleano (`boolean`)**
+
+Los booleanos representan valores de verdad, `true` o `false`.
+
+**Funciones útiles**:
+- `Boolean()`: Convierte otros valores a booleanos.
+- Operadores de comparación (`===`, `!==`, `<`, `>`, etc.): Para evaluar condiciones.
+
+**Ejemplo práctico**:
+```javascript
+let edad = 18;
+let esMayorDeEdad = edad >= 18;
+console.log(esMayorDeEdad); // true
+
+let mensaje = " ";
+console.log(Boolean(mensaje)); // true, ya que la cadena no está vacía
+```
+
+**Recurso externo**: [MDN - Booleanos en JavaScript](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Boolean)
+
+---
+
+### **4. Nulo (`null`)**
+
+`null` es un valor especial que indica la ausencia intencional de un objeto o valor.
+
+**Usos comunes**:
+- Es útil para inicializar variables que luego se espera que almacenen un objeto.
+- Verificar si un valor es `null` antes de realizar operaciones con él.
+
+**Ejemplo práctico**:
+```javascript
+let usuario = null; // Usuario aún no está definido
+if (usuario === null) {
+    console.log("No se ha iniciado sesión");
+} else {
+    console.log("Bienvenido " + usuario);
+}
+```
+
+**Recurso externo**: [MDN - Null](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/null)
+
+---
+
+### **5. Indefinido (`undefined`)**
+
+`undefined` indica que una variable ha sido declarada, pero no tiene un valor asignado.
+
+**Usos comunes**:
+- Comprobar si una variable no tiene un valor asignado.
+- Las funciones que no retornan un valor explícito devuelven `undefined`.
+
+**Ejemplo práctico**:
+```javascript
+let cliente;
+console.log(cliente); // undefined, no tiene un valor asignado
+
+function saludar() {}
+console.log(saludar()); // undefined, ya que no retorna un valor
+```
+
+**Recurso externo**: [MDN - Undefined](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+
+---
+
+### **6. Símbolo (`symbol`)**
+
+Un `symbol` es un valor único y no mutable, útil para identificar propiedades de objetos sin riesgo de colisión.
+
+**Usos comunes**:
+- Para crear claves de propiedad únicas en objetos.
+
+**Ejemplo práctico**:
+```javascript
+let id = Symbol("id");
+let usuario = {
+  [id]: 123
 };
-
-persona.saludar();  // Hola, soy Juan
+console.log(usuario[id]); // 123
 ```
 
-#### **Arreglos**
-Un arreglo es una lista ordenada de elementos que pueden ser de cualquier tipo de dato.
+**Recurso externo**: [MDN - Symbol](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
+
+---
+
+### **7. Objeto (`object`)**
+
+Un `object` es una colección de propiedades, donde cada propiedad tiene un nombre (clave) y un valor.
+
+**Funciones útiles**:
+- `Object.keys()`: Devuelve las claves del objeto.
+- `Object.values()`: Devuelve los valores del objeto.
+- `Object.entries()`: Devuelve pares clave-valor como un arreglo.
+
+**Ejemplo práctico**:
 ```javascript
-const numeros = [1, 2, 3, 4, 5];
-console.log(numeros[0]);  // 1
+let persona = { nombre: "Ana", edad: 30 };
+console.log(Object.keys(persona)); // ["nombre", "edad"]
+console.log(Object.values(persona)); // ["Ana", 30]
 ```
 
-Los arreglos tienen métodos útiles como:
-- `push()`: Agrega un elemento al final del arreglo.
+**Recurso externo**: [MDN - Object](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Object)
+
+---
+
+### **8. Arreglo (`array`)**
+
+Un `array` es un tipo especial de objeto que permite almacenar múltiples valores en un solo contenedor.
+
+**Funciones útiles**:
+- `push()`: Agrega un elemento al final.
 - `pop()`: Elimina el último elemento.
-- `map()`, `filter()`, `reduce()`: Métodos avanzados para transformar o reducir arreglos.
+- `map()`: Aplica una función a cada elemento y retorna un nuevo array.
+- `filter()`: Filtra elementos según una condición.
+
+**Ejemplo práctico**:
+```javascript
+let numeros = [1, 2, 3, 4];
+numeros.push(5); // [1, 2, 3, 4, 5]
+let pares = numeros.filter(num => num % 2 === 0); // [2, 4]
+```
+
+**Recurso externo**: [MDN - Array](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+---
+
+### **9. Función (`function`)**
+
+Una `function` es un bloque de código diseñado para realizar una tarea específica.
+
+**Funciones útiles**:
+- `call()`, `apply()`: Ejecutan una función con un contexto específico.
+- `bind()`: Crea una nueva función con un contexto fijo.
+
+**Ejemplo práctico**:
+```javascript
+function saludar(nombre) {
+    return `Hola, ${nombre}!`;
+}
+
+console.log(saludar("Pedro")); // "Hola, Pedro!"
+```
+
+**Recurso externo**: [MDN - Funciones](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Functions)
+
 
