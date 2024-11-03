@@ -1,21 +1,67 @@
 ---
 
-### **Unidad 2: Funciones y Estructuras de Control**
+# **Unidad 2: Funciones y Estructuras de Control**
+---
 
-#### **Funciones**
-Las funciones son bloques de código reutilizables que realizan una tarea específica.
-- **Declaración de funciones**:
+### ¿Qué es una Función?
+
+Una **función** en JavaScript es un bloque de código que realiza una tarea específica. Podemos "llamar" a la función en cualquier momento para ejecutar ese bloque de código. La función puede también recibir datos llamados **parámetros** y devolver un resultado con la palabra clave `return`.
+
+Imagina que tienes una receta para hacer un batido. Cada vez que quieres un batido, sigues los pasos de esa receta. La función es como esa receta: la defines una vez, y luego puedes usarla todas las veces que quieras sin repetir el código.
+
+---
+
+### Dos Maneras de Definir una Función
+
+1. **Función Tradicional**
+2. **Función Flecha (Arrow Function)**
+
+---
+
+### 1. Función Tradicional
+
+Se define usando la palabra clave `function`, seguida de un nombre para la función (como "nombreDeLaFuncion"), paréntesis para los parámetros, y llaves `{ }` para el código de la función.
+
 ```javascript
-function saludar(nombre) {
-  return "Hola, " + nombre;
+function sumar(a, b) {
+    return a + b;
 }
-console.log(saludar("Ana"));  // Hola, Ana
+
+console.log(sumar(3, 4)); // 7
 ```
-- **Funciones flecha (arrow functions)**:
+
+En este ejemplo:
+- `sumar` es el nombre de la función.
+- `(a, b)` son los parámetros, que representan los números que queremos sumar.
+- `return a + b;` devuelve el resultado de sumar `a` y `b`.
+
+---
+
+### 2. Función Flecha (Arrow Function)
+
+La **función flecha** es una manera más corta de escribir funciones. En lugar de `function`, usamos `=>` para definir la función.
+
 ```javascript
 const sumar = (a, b) => a + b;
-console.log(sumar(2, 3));  // 5
+
+console.log(sumar(3, 4)); // 7
 ```
+
+Es lo mismo que la función tradicional, pero en una forma más compacta. Notas:
+- No usamos la palabra `function`.
+- La flecha `=>` indica el inicio del bloque de código.
+- Si solo hay una línea de código, podemos omitir las llaves `{ }` y el `return`.
+
+---
+
+### Resumen
+
+Ambas formas hacen lo mismo: permiten escribir bloques de código reutilizables. La principal diferencia es que la **función flecha** es más corta, ideal para funciones simples y rápidas.
+
+### Ejercicio
+Crear una función que convierta una temperatura de Farenheita Celcius y otra funcion que convierta una temperatura de Celcius a Farenheit. La primera con función tradicional y la otra con función de flecha. Recuerda que para convertir de Fahrenheit a Celsius, simplemente reste 32 y multiplique por 0.5556 (o 5/9). Para convertir de Celsius a Fahrenheit, simplemente multiplique por 1.8 (o 9/5) y sume 32
+
+---
 
 #### **Estructuras de Control**
 - **Condicionales (`if`, `else`, `switch`)**:
