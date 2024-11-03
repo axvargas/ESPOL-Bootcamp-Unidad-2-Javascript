@@ -129,10 +129,9 @@ registrarVenta(50);  // Venta registrada. Total ventas: $150
 3. **Booleano (`boolean`)**
 4. **Nulo (`null`)**
 5. **Indefinido (`undefined`)**
-6. **Símbolo (`symbol`)**
-7. **Objeto (`object`)**
-8. **Arreglo (`array`)** - Un tipo especial de objeto
-9. **Función (`function`)** - Otro tipo especial de objeto
+6. **Objeto (`object`)**
+7. **Arreglo (`array`)** - Un tipo especial de objeto
+8. **Función (`function`)** - Otro tipo especial de objeto
 
 ---
 
@@ -247,27 +246,7 @@ console.log(saludar()); // undefined, ya que no retorna un valor
 
 ---
 
-### **6. Símbolo (`symbol`)**
-
-Un `symbol` es un valor único y no mutable, útil para identificar propiedades de objetos sin riesgo de colisión.
-
-**Usos comunes**:
-- Para crear claves de propiedad únicas en objetos.
-
-**Ejemplo práctico**:
-```javascript
-let id = Symbol("id");
-let usuario = {
-  [id]: 123
-};
-console.log(usuario[id]); // 123
-```
-
-**Recurso externo**: [MDN - Symbol](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Symbol)
-
----
-
-### **7. Objeto (`object`)**
+### **6. Objeto (`object`)**
 
 Un `object` es una colección de propiedades, donde cada propiedad tiene un nombre (clave) y un valor.
 
@@ -287,7 +266,7 @@ console.log(Object.values(persona)); // ["Ana", 30]
 
 ---
 
-### **8. Arreglo (`array`)**
+### **7. Arreglo (`array`)**
 
 Un `array` es un tipo especial de objeto que permite almacenar múltiples valores en un solo contenedor.
 
@@ -308,7 +287,7 @@ let pares = numeros.filter(num => num % 2 === 0); // [2, 4]
 
 ---
 
-### **9. Función (`function`)**
+### **8. Función (`function`)**
 
 Una `function` es un bloque de código diseñado para realizar una tarea específica.
 
