@@ -1,9 +1,3 @@
-La **Programación Orientada a Objetos (POO)** en JavaScript es un paradigma de desarrollo que permite estructurar el código mediante **clases** y **objetos**. Esta técnica permite organizar el código en módulos independientes que interactúan entre sí, facilitando su mantenimiento, reutilización y escalabilidad. 
-
-Aquí te presento una explicación práctica, junto con un ejemplo que un desarrollador junior podría enfrentar en un entorno de trabajo.
-
----
-
 ## Introducción a la Programación Orientada a Objetos en JavaScript
 
 ### Conceptos Clave
