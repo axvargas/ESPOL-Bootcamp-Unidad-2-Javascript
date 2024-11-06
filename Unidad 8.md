@@ -1,6 +1,4 @@
 # **Unidad 8: Fetch – JSON y XML – Consumo de Servicios**
-Claro, vamos a detallar el funcionamiento de la función `fetch` en JavaScript y cómo utilizarla con APIs reales. Aquí te presento una explicación general sobre `fetch`, seguida de ejemplos prácticos con APIs gratuitas en formato JSON y XML, además de un ejemplo con paginación.
-
 ---
 
 ## ¿Qué es `fetch`?
