@@ -110,7 +110,7 @@ En este caso, `filter` nos ayuda a obtener un array de productos que están disp
 
 ---
 
-### 4 `reduce`
+### 4. `reduce`
 
 La función **`reduce`** permite “reducir” o combinar los elementos de un array en un solo valor, como la suma de números o la construcción de un objeto.
 
@@ -166,7 +166,7 @@ Después de procesar todos los elementos, `reduce` devuelve el valor final del `
 
 ---
 
-### 5 `sort`
+### 5. `sort`
 
 La función **`sort`** se usa para ordenar los elementos de un array. Esta función modifica el array original y ordena los elementos en función de una función de comparación que tú defines.
 
