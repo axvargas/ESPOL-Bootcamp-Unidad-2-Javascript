@@ -1,6 +1,3 @@
-Aquí tienes un ejercicio práctico para que los alumnos puedan aplicar sus conocimientos sobre **Variables**, **Funciones**, **Objetos** y **Estructuras de Control**. Este ejercicio está diseñado para que simule un caso casi real que podrían enfrentar como desarrolladores junior. 
-
----
 
 ## Ejercicio: Gestión de Inventario de una Tienda
 
