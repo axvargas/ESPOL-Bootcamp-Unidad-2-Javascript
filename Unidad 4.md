@@ -312,3 +312,30 @@ boton.addEventListener('click', () => {
 - **`querySelectorAll`**: Selecciona todos los elementos que coinciden con el selector CSS y devuelve una NodeList.
 - Se pueden utilizar selectores de CSS para seleccionar elementos por ID, clase, etiqueta, atributos, y combinaciones de estos.
 
+### Código de clase
+``javascript
+const boton = document.querySelector('#miBoton');
+
+const cambiarColor = (colorEnviado) => {
+  // obtener todos los elementos con la clase "destacado"
+  const elementos = document.querySelectorAll('.destacado');
+  // iterar sobre los elementos y aplicar el estilo de color azul
+
+  const primerElemento = elementos[0];
+  let nuevoColor;
+  if (primerElemento.style.color === 'red')
+    nuevoColor = colorEnviado;
+  else {
+    nuevoColor = 'red';
+  }
+
+  elementos.forEach(elemento => {
+    elemento.style.color = nuevoColor;
+  });
+}
+
+
+boton.addEventListener('click', ()=>{
+  cambiarColor('green')
+});
+```
