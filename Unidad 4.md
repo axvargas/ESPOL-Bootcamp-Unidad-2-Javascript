@@ -313,7 +313,7 @@ boton.addEventListener('click', () => {
 - Se pueden utilizar selectores de CSS para seleccionar elementos por ID, clase, etiqueta, atributos, y combinaciones de estos.
 
 ### Código de clase
-``javascript
+```javascript
 const boton = document.querySelector('#miBoton');
 
 const cambiarColor = (colorEnviado) => {
