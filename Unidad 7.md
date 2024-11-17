@@ -1,6 +1,6 @@
 ---
 
-# **Unidad 6: Eventos y Callbacks**
+# **Unidad 7: Eventos y Callbacks**
 ## Eventos en el DOM
 
 En JavaScript, un **evento** es una acción que ocurre en la página web y puede ser detectada por el navegador. Estos eventos incluyen cosas como hacer clic en un botón, pasar el mouse sobre una imagen, presionar una tecla en el teclado, o incluso cargar la página completa.
