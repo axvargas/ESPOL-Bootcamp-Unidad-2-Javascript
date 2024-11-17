@@ -1,4 +1,4 @@
-# **Unidad 7: Funciones de Orden Superior**
+# **Unidad 6: Funciones de Orden Superior**
 
 ## **Funciones de Orden Superior (HOF)**
 Las **funciones de orden superior** en JavaScript son aquellas que pueden recibir otras funciones como argumentos, o devolver una función como resultado. Estas funciones son fundamentales en el desarrollo moderno, ya que permiten trabajar con estructuras de datos de manera eficiente y escribir código más claro y modular.
