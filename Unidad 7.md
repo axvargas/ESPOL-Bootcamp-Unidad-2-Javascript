@@ -86,6 +86,157 @@ En este caso:
 - **`addEventListener`**: Método recomendado para manejar eventos, manteniendo el código organizado.
 - **Aplicación**: Se puede modificar el contenido del DOM, cambiar estilos, o realizar casi cualquier operación en respuesta a eventos.
 
+
+### **Menú de navegación que se muestra y se oculta al hacer clic en un botón**
+
+En este ejemplo, crearemos un menú de navegación que se despliega y se oculta al hacer clic en un botón, utilizando JavaScript. Separaremos el CSS en su propio archivo y explicaremos el código JavaScript paso a paso para que sea fácil de seguir.
+
+---
+
+#### **Archivo HTML (`index.html`)**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable</title>
+  <link rel="stylesheet" href="style.css"> <!-- Enlace al archivo CSS -->
+</head>
+<body>
+  <header>
+    <button id="menu-toggle">☰ Menú</button> <!-- Botón para mostrar/ocultar el menú -->
+    <nav id="nav-menu" class="hidden">
+      <ul>
+        <li><a href="#home">Inicio</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#services">Servicios</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <script src="script.js"></script> <!-- Enlace al archivo JavaScript -->
+</body>
+</html>
+```
+
+---
+
+#### **Archivo CSS (`style.css`)**
+```css
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Botón del menú */
+#menu-toggle {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Menú de navegación */
+#nav-menu {
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista del menú */
+#nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Enlaces del menú */
+#nav-menu li {
+  margin: 10px 0;
+}
+
+#nav-menu a {
+  text-decoration: none;
+  color: #007BFF;
+  font-size: 18px;
+}
+
+/* Ocultar el menú por defecto */
+.hidden {
+  display: none;
+}
+```
+
+---
+
+#### **Archivo JavaScript (`script.js`)**
+```javascript
+// Paso 1: Seleccionar los elementos del DOM
+const menuToggle = document.getElementById('menu-toggle'); // Botón de menú
+const navMenu = document.getElementById('nav-menu'); // Menú de navegación
+
+// Paso 2: Agregar un event listener al botón
+menuToggle.addEventListener('click', () => {
+  // Paso 3: Alternar la clase "hidden" en el menú
+  navMenu.classList.toggle('hidden');
+});
+```
+
+---
+
+### **Explicación paso a paso del código JavaScript:**
+
+1. **Seleccionar los elementos del DOM:**
+   ```javascript
+   const menuToggle = document.getElementById('menu-toggle');
+   const navMenu = document.getElementById('nav-menu');
+   ```
+   - Usamos `document.getElementById` para seleccionar el botón con ID `menu-toggle` y el menú con ID `nav-menu`.
+   - Estas referencias nos permiten interactuar con estos elementos en el JavaScript.
+
+2. **Agregar un `event listener` al botón:**
+   ```javascript
+   menuToggle.addEventListener('click', () => {
+     // Código dentro del listener
+   });
+   ```
+   - Asignamos un evento `click` al botón `menu-toggle`.
+   - Cada vez que el botón sea presionado, se ejecutará la función definida dentro del `addEventListener`.
+
+3. **Alternar la clase `hidden`:**
+   ```javascript
+   navMenu.classList.toggle('hidden');
+   ```
+   - Usamos el método `classList.toggle` para agregar o quitar la clase `hidden` del menú.
+   - Si el menú tiene la clase `hidden`, se elimina (mostrando el menú).
+   - Si no tiene la clase, se agrega (ocultando el menú).
+
+---
+
+### **Pasos para que los estudiantes implementen el proyecto:**
+
+1. **Crear los archivos necesarios:**
+   - Crea tres archivos: `index.html`, `style.css` y `script.js`.
+   - Copia y pega el código anterior en los archivos correspondientes.
+
+2. **Configurar el entorno local:**
+   - Usa **Visual Studio Code** y ejecuta el archivo `index.html` con la extensión **Live Server** para ver los cambios en tiempo real.
+
+3. **Paso a paso en el JavaScript:**
+   - **Selecciona los elementos**: Usa `document.getElementById` para obtener referencias al botón y al menú.
+   - **Agrega un evento**: Usa `addEventListener` para que el botón reaccione al clic.
+   - **Alterna la clase**: Aplica `classList.toggle` para ocultar o mostrar el menú.
+
+4. **Prueba el comportamiento:**
+   - Haz clic en el botón y verifica que el menú se muestra y se oculta correctamente.
+
+---
+
 ### Recursos Externos
 
 1. [Mozilla Developer Network (MDN) - Introducción a los eventos en JavaScript](https://developer.mozilla.org/es/docs/Learn/JavaScript/Building_blocks/Events)
