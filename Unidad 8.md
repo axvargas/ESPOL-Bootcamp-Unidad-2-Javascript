@@ -1,4 +1,4 @@
-# **Unidad 8: Fetch – JSON y XML – Consumo de Servicios**
+# **Unidad 8: Fetch – JSON – Consumo de Servicios**
 ---
 
 ## ¿Qué es `fetch`?
@@ -64,57 +64,6 @@ fetch(url)
 2. **Verificación de respuesta**: Verificamos si la respuesta es correcta. Si no lo es, arrojamos un error.
 3. **Conversión a JSON**: Convertimos la respuesta en JSON usando `response.json()`.
 4. **Procesamiento de datos**: Iteramos sobre `data.results` para mostrar el nombre completo y país de cada usuario.
-
----
-### Ejemplo 2: Consumo de API XML (API de incidentes de policía en San Francisco)
-
-### Pasos para usar la API
-1. La API no requiere autenticación, por lo que es de fácil acceso.
-2. Esta API devuelve un XML con los registros de incidentes de la policía, incluyendo datos como el tipo de incidente, la fecha y la ubicación.
-
-### Código paso a paso
-
-```javascript
-// URL de la API de incidentes de policía en formato XML
-const url = "https://data.sfgov.org/resource/cuks-n6tp.xml?$limit=5"; // Se limita a 5 registros para simplificar
-
-fetch(url)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error("Error en la respuesta de la API");
-    }
-    return response.text(); // Convertimos la respuesta a texto para procesar XML
-  })
-  .then(data => {
-    // Parseamos el XML usando DOMParser
-    const parser = new DOMParser();
-    const xmlDoc = parser.parseFromString(data, "application/xml");
-
-    // Seleccionamos todos los elementos <row> que representan incidentes
-    const incidents = xmlDoc.querySelectorAll("row");
-    incidents.forEach((incident, index) => {
-      const category = incident.querySelector("category").textContent;
-      const date = incident.querySelector("date").textContent;
-      const description = incident.querySelector("descript").textContent;
-      console.log(`Incidente ${index + 1}: ${category} - ${description} (Fecha: ${date})`);
-    });
-  })
-  .catch(error => {
-    console.error("Hubo un problema con la solicitud fetch:", error);
-  });
-```
-
-### Explicación paso a paso
-
-1. **Llamada a `fetch`**: Usamos `fetch` para hacer una solicitud a la URL de la API de incidentes de policía de San Francisco.
-2. **Conversión a texto**: Debido a que los datos están en XML, usamos `response.text()` para convertir la respuesta a texto.
-3. **Parseo de XML**: Utilizamos `DOMParser` para convertir el texto XML en un documento manipulable.
-4. **Extracción de datos**: Seleccionamos los elementos `<row>`, y de cada uno extraemos la categoría del incidente, la descripción y la fecha.
-5. **Visualización de datos**: Imprimimos los datos de cada incidente en la consola, con el formato `Incidente {número}: {categoría} - {descripción} (Fecha: {fecha})`.
-
-Este ejemplo es útil para visualizar cómo trabajar con datos estructurados en XML, ya que a menudo encontramos datos en este formato en aplicaciones de agencias gubernamentales o en reportes detallados de eventos. 
-
-Prueba este código y ajusta el límite de registros o la URL según lo necesites para trabajar con más datos.
 
 ---
 
