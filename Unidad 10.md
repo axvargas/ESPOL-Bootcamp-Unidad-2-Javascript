@@ -85,7 +85,7 @@ Save this as `script.js`.
 
 ### **1. Configuración del token de Mapbox**
 ```javascript
-mapboxgl.accessToken = 'pk.eyJ1IjoiYW5kcmVzeGF2aWVyOTkiLCJhIjoiY20zbWUyMWdqMTFzZDJrcHhidjlhZjFwaCJ9.JxyJSYQBmQI77epaw4xUaQ';
+mapboxgl.accessToken = 'TU TOKEN VA AQUÍ';
 ```
 - **¿Qué hace?**
   - Se establece un token de acceso para Mapbox. Este token es como una clave que autentica tu aplicación para usar los servicios de Mapbox.
