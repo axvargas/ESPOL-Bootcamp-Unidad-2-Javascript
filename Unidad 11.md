@@ -37,7 +37,7 @@ Escribe el siguiente código:
 - Debes especificar el tipo de dato:
   ```typescript
   let variable: string = "Soy un string";
-//   variable = 123; // Esto genera un error
+   //   variable = 123; // Esto genera un error
   ```
 
 ### **Ventajas del tipado estático:**
