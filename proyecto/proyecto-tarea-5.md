@@ -1,4 +1,4 @@
-### **Tarea 6: Crear un sistema interactivo para listar y filtrar productos**  
+### **Tarea 5: Crear un sistema interactivo para listar y filtrar productos**  
 
 ---
 
