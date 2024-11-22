@@ -1,4 +1,4 @@
-### **Tarea 7: Mostrar el clima actual basado en la ubicación del usuario**
+### **Tarea 6: Mostrar el clima actual basado en la ubicación del usuario**
 
 ---
 
