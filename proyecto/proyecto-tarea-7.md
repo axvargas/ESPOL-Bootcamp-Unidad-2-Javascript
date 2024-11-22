@@ -1,4 +1,4 @@
-### Tarea: Agregar el texto al pie de página (Footer)
+### Tarea 7: Agregar el texto al pie de página (Footer)
 
 ---
 
