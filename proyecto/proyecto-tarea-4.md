@@ -34,6 +34,7 @@ El objetivo de esta tarea es que los estudiantes:
      { src: "./assets/gallery/image1.jpg", alt: "Thumbnail Image 1" }
      ```
    - **IMPORTANTE:** La información para llenar los objetos de galería de imágenes la puedes encontrar en las líneas 118-120. Una vez tengas el arreglo de objetos de galería de imágenes Debes dejar el tag `div` con classname `thumbnails` vacío por ende debes borrar las lineas 118 - 120:
+
      ![image](https://github.com/user-attachments/assets/833b4ee8-a2b3-4119-9585-739e254e4e51)
 
 
