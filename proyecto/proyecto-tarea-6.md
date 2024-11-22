@@ -15,9 +15,9 @@ Esta tarea tiene como objetivos:
 
 #### **Parte 1: Preparar la clave y URL de la API**  
 
-1. **Obtener la clave de la API (API Key):**  
+1. **Obtener la clave de la API (API Key):**
+   - Sigue las instrucciones que se muestran en este video para obtener tu API Key gratis: https://www.youtube.com/watch?v=tPlD-CmH7H4
    - Ve a [OpenWeatherMap](https://openweathermap.org/api) y regístrate.  
-   - Crea un proyecto para obtener tu API Key.  
    - Sustituye `"TU API KEY AQUÍ"` por tu clave en el código.  
 
    **Código Inicial:**  
