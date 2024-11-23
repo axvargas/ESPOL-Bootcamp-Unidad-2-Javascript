@@ -131,6 +131,44 @@ const fetchBreweries = async () => {
   }
 };
 ```
+
+```javascript
+const fetchBreweriesAsyncAwait = async () => {
+  const url = 'https://api.openbrewerydb.org/breweries?per_page=10';
+  try {
+    const response = await fetch(url); // Llama a la API para obtener datos
+    const breweries = await response.json(); // Convierte la respuesta a JSON
+    return breweries; // Devuelve los datos
+  } catch (error) {
+    console.error('Error fetching breweries:', error);
+  }
+};
+
+const fetchBreweriesThenStructure = () => {
+  const url = 'https://api.openbrewerydb.org/breweries?per_page=10';
+  fetch(url)
+    .then(response => {
+      // Comprobamos si la respuesta es exitosa
+      if (!response.ok) {
+        throw new Error("Error fetching breweries");
+      }
+      // Convertimos la respuesta a formato JSON
+      return response.json();
+    })
+    .then(data => {
+      console.log(data);
+    })
+    .catch(error => {
+      console.error("Error fetching breweries: ", error);
+    });
+};
+
+(async function initializeApp() {
+  console.log(await fetchBreweriesAsyncAwait()); // Obtiene los datos
+})();
+
+fetchBreweriesThenStructure();
+```
 - **¿Qué hace?**
   - Llama a la API **Open Brewery DB** para obtener una lista de 10 cervecerías.
   - Usa la función `fetch` para realizar la solicitud HTTP.
